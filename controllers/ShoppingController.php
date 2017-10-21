@@ -15,7 +15,8 @@ class ShoppingController extends CI_Controller {
 
     public function index()
     {
-        $data['count']=$this->cart->total_items();             
+        $data['count']=$this->cart->total_items();
+        //gets the number of items in the cart             
         $data['products']=$this->ItemModel->getItems();
         $this->load->view('header.php',$data);
         $this->load->view('Shopping/Shopping.php',$data);
