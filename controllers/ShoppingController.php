@@ -16,7 +16,7 @@ class ShoppingController extends CI_Controller {
     public function index()
     {
         $data['count']=$this->cart->total_items();
-        //gets the number of items in the cart             
+                    
         $data['products']=$this->ItemModel->getItems();
         $this->load->view('header.php',$data);
         $this->load->view('Shopping/Shopping.php',$data);
@@ -24,8 +24,6 @@ class ShoppingController extends CI_Controller {
     
     public function add()
     {  
-        $_SESSION['count'] = !isset($_SESSION['count']) ? 0 : $_SESSION['count'];
-        $session['count']++;
         $id=$this->input->post('itemID');
         $item=$this->ItemModel->getItemsById($id);
         
