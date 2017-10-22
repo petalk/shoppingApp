@@ -56,7 +56,7 @@ class ItemModel extends CI_Model {
         $this->db->select();
         $this->db->from('tblitems');
         $this->db->join('images', 'tblitems.ImageID = images.ImageID');
-        $this->db->like("name",$id);
+        $this->db->like("search",$id);
         $query=$this->db->get();
         
 //        $sql = "select it.ID,it.name,it.description,it.price,it.Quantity,im.ImageID,im.MainImage from tblitems it inner join images im on it.ImageID=im.ImageID";
