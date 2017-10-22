@@ -40,10 +40,24 @@ class ShoppingController extends CI_Controller {
                 redirect('ShoppingController');   
         }      
     }
-    
+
+    public function remove_items($id)
+    {
+        $qty=0;
+        $array=array('rowid' =>$id ,'qty'=>$qty );
+        $this->cart->update($array);
+        redirect('ShoppingController');
+    }
+
     public function emptyCart()
     {
         $this->cart->destroy();
         redirect('ShoppingController');
-    }        
+    }
+    
+    public function check_out()
+    {
+        
+    }
+
 }

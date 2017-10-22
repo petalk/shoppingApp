@@ -30,7 +30,7 @@
                    <p id="">Stock - {{item.Quantity}}</p>
                    <button>Order Now</button>
                    <?php 
-                              $attributes = array("class" => "form-horizontal", "id" => "loginform", "name" => "loginform");
+                              $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
                               echo form_open("ShoppingController/add", $attributes);
                     ?>   
                                  <input type="hidden" name="itemID" value="{{item.ID}}"/>
@@ -98,6 +98,21 @@
    </div>
    </div>
     
+   <!----------------------Order now form------------> 
+   <div id="orderNowForm"> 
+
+   <?php 
+        $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
+         echo form_open("ShoppingController/add", $attributes);
+    ?>   
+        <input type="text" name=""userName">
+        <input type="text" name="userMail">
+        <input type="text" name="userAddress">
+        <input type="number" name="userNumber">
+        <input id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Submit" />
+        <?php echo form_close(); ?>  
+
+   </div> 
 </div>
 
 <script>

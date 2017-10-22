@@ -19,6 +19,7 @@ else:
             <td>Item Description</td>
             <td>Item Price</td>
             <td>Sub-Total</td>
+            <td>Remove</td>
         </tr>
     </thead>
     <tbody>
@@ -35,8 +36,10 @@ else:
              
             <td>Rs <?php echo $this->cart->format_number($items['price']); ?></td>
             <td>Rs <?php echo $this->cart->format_number($items['qty']*$items['price']); ?></td>
+            <td><a href="<?php echo base_url();?>index.php/ShoppingController/remove_items/<?php echo $items['rowid']; ?>">x</a></td>
         </tr>
          
+
         <?php $i++; ?>
         <?php endforeach; ?>
          
@@ -55,7 +58,7 @@ else:
 echo form_close(); 
 endif;
 ?>
-
+<a href="<?php echo base_url();?>index.php/ShoppingController/check_out"> Check out</a>
 
 </body>
 </html>
