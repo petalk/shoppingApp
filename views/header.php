@@ -1,4 +1,4 @@
-<?php
+    <?php
 ?>
 <html>
     <header>
@@ -19,12 +19,12 @@
             <div class="container">
                 <div class="row row1">
                     <ul class="largenav pull-right">
-<!--                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">Link 1</a></li>
-                        <li class="upper-links"><a class="links" href="https://campusbox.org/">Link 2</a></li>
-                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">Link 3</a></li>
-                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">Link 4</a></li>
-                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">Link 5</a></li>
-                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">Link 6</a></li>
+                        <li class="upper-links"><b><a class="links" href="http://clashhacks.in/">Home</a><b></li>
+                        <li class="upper-links"><a class="links" href="https://campusbox.org/">Contact us</a></li>
+                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">About</a></li>
+                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">Location</a></li>
+<!--                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">Link 5</a></li>
+                        <li class="upper-links"><a class="links" href="http://clashhacks.in/">Link 6</a></li>-->
                         <li class="upper-links">
                             <a class="links" href="http://clashhacks.in/">
                                 <svg class="" width="16px" height="12px" style="overflow: visible;">
@@ -32,7 +32,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="upper-links dropdown"><a class="links" href="http://clashhacks.in/">Dropdown</a>
+<!--                        <li class="upper-links dropdown"><a class="links" href="http://clashhacks.in/">Dropdown</a>
                             <ul class="dropdown-menu">
                                 <li class="profile-li"><a class="profile-links" href="http://yazilife.com/">Link</a></li>
                                 <li class="profile-li"><a class="profile-links" href="http://hacksociety.tech/">Link</a></li>
@@ -50,8 +50,8 @@
                 <div class="row row2">
                     <div class="col-sm-2">
                         <a href="<?php echo base_url();?>" id="siteName">
-                        <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Brand</span></h2>
-                        <h1 style="margin:0px;"><span class="largenav">Brand</span></h1>
+                        <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()"><img id="logo" src="<?php echo base_url();?>logo/LOGO.png" id></span></h2>
+                        <h1 style="margin:0px;"><span class="largenav"><img id="logo" src="<?php echo base_url();?>logo/LOGO.png" id></span></h1>
                         </a>
                     </div>
                     <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">

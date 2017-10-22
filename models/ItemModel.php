@@ -12,7 +12,7 @@ class ItemModel extends CI_Model {
     }
     
      public function getItems() {
-        $sql = "select it.ID,it.name,it.description,it.price,it.Quantity,im.ImageID,im.MainImage from tblitems it inner join images im on it.ImageID=im.ImageID";
+        $sql = "select it.ID,it.oldprice,it.name,it.description,it.price,it.Quantity,im.ImageID,im.MainImage from tblitems it inner join images im on it.ImageID=im.ImageID";
         $query = $this->db->query($sql);
         return $query->result_array();
      }

@@ -1,14 +1,16 @@
 <!--
-<html>
+--><html>
     <header>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <script type="text/javascript" src="<?php echo base_url(); ?>/js/ownAng.js"></script>
-     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/index.css">
+     
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/index.css">
+    
      <link rel="Stylesheet" type="text/css" href="<?php echo base_url();?>/css/css/smoothDivScroll.css" />
     </header>
-    <body>
+    <body><!--
         <style>
             	
 	</style>
@@ -22,7 +24,8 @@
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>
                             Stock : {{item.Quantity}} <br>
-                            Price : {{item.price}} <br><br>
+                            <span id="price">Price : {{item.price}} <br>
+                            <span id="oldprice"><i><del>Price: {{item.oldprice}}</del></i><br>
                             <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">watch</a>
                     </li> 
                   
@@ -47,7 +50,7 @@
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>
                             Stock : {{item.Quantity}} <br>
-                            Price : {{item.price}} <br><br>
+                            <span id="Price">Price : {{item.price}} <br><br>
                             <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">watch</a>
                     </li> 
                    
@@ -62,7 +65,8 @@
                     <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                     <span id="itemName">{{item.name}}</span><br>
                     Stock : {{item.Quantity}} <br>
-                    Price : {{item.price}} <br>
+                    <span id="price"> Price : {{item.price}} <br>
+                    <span id="oldprice"><i><del>Price: {{item.oldprice}}</del></i><br>    
                     <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">Buy now</a>
                 </li> 
             </div>
