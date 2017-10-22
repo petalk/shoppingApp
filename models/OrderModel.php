@@ -12,7 +12,7 @@ class ItemModel extends CI_Model {
 
     public function order($data)
     {
-        $this->db->insert_id($data);
+        $id=$this->db->insert_id($data);
     }
 
 }

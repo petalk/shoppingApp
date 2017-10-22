@@ -14,6 +14,7 @@ class Welcome extends CI_Controller {
                 $data['count']=$this->cart->total_items();  
                 $this->load->view('header',$data);
 		$this->load->view('index.php');
+                $this->load->view('footer.php');
                 //$this->load->view('footer.php');
 	}
         public function detail($id)
@@ -22,5 +23,6 @@ class Welcome extends CI_Controller {
                 $data["id"]=$id;
                 $this->load->view('header',$data);
                 $this->load->view('Detail/detail.php',$data);
+                $this->load->view('footer.php');
         }        
 }

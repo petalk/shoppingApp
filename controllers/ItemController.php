@@ -20,9 +20,9 @@ class ItemController extends CI_Controller {
         }        
         
         public function getItems() {
-        $this->load->model(array('ItemModel'));
-        $data = $this->ItemModel->getItems();
-        $this->output->set_content_type('application/json')->set_output(json_encode($data));
+                $this->load->model(array('ItemModel'));
+                $data = $this->ItemModel->getItems();
+                $this->output->set_content_type('application/json')->set_output(json_encode($data));
         }
 //         
          public function getItemsByID($id) {
