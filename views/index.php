@@ -24,7 +24,7 @@
                             <span id="itemName">{{item.name}}</span><br>
                             Stock : {{item.Quantity}} <br>
                             <span id="price">Price : {{item.price}} <br>
-                            <span id="oldprice"><i><del>Price: {{item.oldprice}}</del></i><br>
+                            <span id="oldprice"><i><del>Price: {{item.oldprice}}</del></i><br><br>
                             <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">watch</a>
                     </li> 
                   
