@@ -22,10 +22,11 @@
                    <li ng-repeat="item in Items" id="content">
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>
-                            Stock : {{item.Quantity}} <br>
-                            <span id="price">Price : {{item.price}} <br>
-                            <span id="oldprice"><i><del>Price: {{item.oldprice}}</del></i><br><br>
-                            <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">watch</a>
+<!--                            Stock : {{item.Quantity}} <br>-->
+                            <span id="oldprice"><i><del>Rs.  {{item.oldprice}}</del></i><br>
+                            <span id="price">Rs.   {{item.price}} <br><br>
+                            
+                                <span id="watchBtn"><a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">watch</a></span>
                     </li> 
                   
             </ul> 
@@ -67,8 +68,8 @@
                    <li ng-repeat="item in Items" id="content">
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>
-                            Stock : {{item.Quantity}} <br>
-                            <span id="Price">Price : {{item.price}} <br><br>
+<!--                            Stock : {{item.Quantity}} <br>-->
+                            <span id="Price">Rs.  {{item.price}} <br><br>
                             <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">watch</a>
                     </li> 
                    
@@ -82,9 +83,10 @@
                 <li ng-repeat="item in Items" id="items" class="well">
                     <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                     <span id="itemName">{{item.name}}</span><br>
-                    Stock : {{item.Quantity}} <br>
-                    <span id="price"> Price : {{item.price}} <br>
-                    <span id="oldprice"><i><del class="double-strike">Price: {{item.oldprice}}</del></i><br>    
+                    <span id="stock">Stock : {{item.Quantity}}</span> <br>
+                     <span id="oldprice"><i><del class="double-strike">Rs.  {{item.oldprice}}</del></i><br>
+                    <span id="price"> Rs.  {{item.price}} <br>
+                       
                     <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">Buy now</a>
                 </li> 
             </div>
