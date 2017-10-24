@@ -23,6 +23,7 @@
                         <li><i id="wIcon" class="fa fa-whatsapp"></i></li>
                         <li><i id="tIcon" class="fa fa-twitter"></i></li>
                         <li><i id="gIcon" class="fa fa-google-plus"></i></li>
+                        
                     </ul>
                 </div>
                 <div class="col-md-1"></div>
@@ -99,6 +100,9 @@ footer-navbar end-->
                 color:white;
                 background: #66ccff;
                 border:solid #66ccff;
+            }
+            #iIcon{
+                padding:10px 12px 10px 12px;
             }
             #gIcon:hover{
                 color:white;

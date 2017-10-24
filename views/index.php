@@ -23,10 +23,10 @@
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>
 <!--                            Stock : {{item.Quantity}} <br>-->
-                            <span id="oldprice"><i><del>Rs.  {{item.oldprice}}</del></i><br>
-                            <span id="price">Rs.   {{item.price}} <br><br>
+                            <span ng-hide="item.oldprice==0" id="oldprice"><i><del>Rs.  {{item.oldprice}}.00</del></i></span><br>
+                            <span id="price">Rs.   {{item.price}}.00 <br><br>
                             
-                                <span id="watchBtn"><a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">watch</a></span>
+                                <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">Watch</a>
                     </li> 
                   
             </ul> 
@@ -69,8 +69,8 @@
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>
 <!--                            Stock : {{item.Quantity}} <br>-->
-                            <span id="Price">Rs.  {{item.price}} <br><br>
-                            <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">watch</a>
+                            <span id="Price">Rs.  {{item.price}}.00 <br><br>
+                            <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">Watch</a>
                     </li> 
                    
             </ul>
@@ -81,11 +81,11 @@
             <div class="col-md-1"></div>
             <div  class="col-md-10" id="itemsContainer">
                 <li ng-repeat="item in Items" id="items" class="well">
-                    <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
+                    <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br><br>
                     <span id="itemName">{{item.name}}</span><br>
                     <span id="stock">Stock : {{item.Quantity}}</span> <br>
-                     <span id="oldprice"><i><del class="double-strike">Rs.  {{item.oldprice}}</del></i><br>
-                    <span id="price"> Rs.  {{item.price}} <br>
+                    <span ng-hide="item.oldprice==0" id="oldprice"><i><del class="double-strike">Rs.  {{item.oldprice}}.00</del></i></span><br>
+                    <span id="price"> Rs.  {{item.price}}.00 <br><br>
                        
                     <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">Buy now</a>
                 </li> 
