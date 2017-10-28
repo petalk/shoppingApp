@@ -19,20 +19,32 @@
                     <h3 style="text-align:center">Stay Connected<hr></h3><br>
                     
                     <ul class="list-inline">
-                        <li><i id="fIcon" class="fa fa-facebook"></i></li>
+                        <li><a href="https://www.facebook.com/Petalk-2046551062235157/"target="_blank"><i id="fIcon" class="fa fa-facebook"></i></a></li>
                         <li><i id="wIcon" class="fa fa-whatsapp"></i></li>
-                        <li><i id="tIcon" class="fa fa-twitter"></i></li>
-                        <li><i id="gIcon" class="fa fa-google-plus"></i></li>
+                        <li><a href="https://twitter.com/peta_lk"target="_blank"><i id="tIcon" class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/u/2/101223230172545134012"target="_blank"><i id="gIcon" class="fa fa-google-plus"></i></a></li>
                         
                     </ul>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-4">
                 
-                <div class="col-md-1"></div>
-                    <h3>Information</h3>
+                
+                
+                <div class="col-md-3">
+                    <h3 style="text-align:center">Information<hr></h3>
+                    <ul class="info">
+                        <li>About Us</li>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy Policy</li>
+                        <li>Careers</li>
+                    </ul>
                 </div>
-            </div>
+                <div class="col-md-2">
+                    <h3 style="text-align:center">Our Service<hr> </h3>
+                    <ul class="service">
+                        <li>FAQ</li>
+                        <li>Contact Us </li>
+                        <li>Offers</li>
+                </div>
                 
           
                 
@@ -111,12 +123,20 @@ footer-navbar end-->
             }
             #fIcon:hover{
                 color:white;
-                background:blue;
-                border:solid blue;
+                background:#000066;
+                border:solid #000066;
             }
             #wIcon:hover{
                 color:white;
                 background:green;
                 border:solid green; 
             }
+            .info,.service{
+                font-family: Adobe Garamond Pro Bold;   
+            }
+            .info li,.service li{
+                color:gray;
+                list-style-type: circle;
+            }
+            
         </style>
