@@ -8,28 +8,48 @@
     <li ng-repeat="item in Items" id="itemDetailLi">
         <div class="row rowD1">
           <div class="container"> 
-           <div class="col-md-1"></div>
 
            <div class="col-md-4" id="imageContainer">
-                <img class="mySlides" src="<?php echo base_url();?>images/{{item.MainImage}}">
+               
+               <?php
+                    foreach($item as $i)
+                    {
+                        if($i['MainImage']!=null)
+                        { ?> <img class="mySlides" src="<?php echo base_url();?>images/{{item.MainImage}}">    
+                        <?php }
+                        if($i['Image1']!=null){?>
+                           <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image1}}"> 
+                        <?php }
+                        if($i['Image2']!=null){?>
+                            <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image2}}"> 
+                        <?php }
+                        if($i['Image3']!=null){?>
+                         <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image3}}"> 
+                        <?php }    
+                    }
+               ?>
+<!--            <img class="mySlides" src="<?php echo base_url();?>images/{{item.MainImage}}">
                 <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image1}}">
                 <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image2}}">
-                <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image3}}">
+                <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image3}}">-->
 
                 <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
            </div><!--End of Image Container-->
-
+            <div class="col-md-1"></div>
             {{messageText}}
-           <div id="detContainer" class="col-md-6">
+           
+            <div id="detContainer" class="col-md-6">
                <h2>{{item.name}}</h2>
                <hr>
                <div id="detailDescription">
                    <p id="price">Just Rs {{item.price}} only</p>
                    <p id="desription">{{item.description}}</p>
                    <p id="">Stock - {{item.Quantity}}</p>
-                   <button>Order Now</button>
-                   <?php 
+<!--                   <a href="<?php echo base_url();?>index.php/OrderController/index/{{item.ID}}">Order Now</a>-->
+                     
+                    
+                    <?php 
                               $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
                               echo form_open("ShoppingController/add", $attributes);
                     ?>   

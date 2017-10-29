@@ -30,7 +30,11 @@ class ItemController extends CI_Controller {
             $data = $this->ItemModel->getItemsById($id);
             $this->output->set_content_type('application/json')->set_output(json_encode($data));
         }
-        
+        public function getAllItemsByID($id) {
+            $this->load->model(array('ItemModel'));
+            $data = $this->ItemModel->getAllDetailById($id);
+            $this->output->set_content_type('application/json')->set_output(json_encode($data));
+        }
         public function getDetail($id){
         $this->load->model(array('ItemModel'));
         $data = $this->ItemModel->getDetails($id);

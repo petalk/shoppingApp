@@ -21,6 +21,8 @@ class Welcome extends CI_Controller {
         {   
                 $data['count']=$this->cart->total_items();    
                 $data["id"]=$id;
+                $this->load->model(array('ItemModel'));
+                $data["item"]=$this->ItemModel->getAllDetailById($id);
                 $this->load->view('header',$data);
                 $this->load->view('Detail/detail.php',$data);
                 $this->load->view('footer.php');

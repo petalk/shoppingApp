@@ -25,6 +25,16 @@ class ItemModel extends CI_Model {
           $query=$this->db->get();
           return $query->result_array();
      }
+     public function getAllDetailById($id)
+     {
+         $this->db->select('*');
+         $this->db->from('tblitems');
+         $this->db->join('images','tblitems.ImageID=images.ImageID');
+         $this->db->where('tblitems.ID',$id
+                 );
+         $query=$this->db->get();
+         return $query->result_array();
+     }        
     public function getDetails($id) {
         $sql = "select it.ID,it.name,it.description,it.price,it.Quantity,im.ImageID,im.MainImage,im.Image1,im.Image2,im.Image3 from tblitems it inner join images im on it.ImageID=im.ImageID where"
                 . " it.ID=?";
