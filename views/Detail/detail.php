@@ -11,10 +11,10 @@
            <div class="col-md-1"></div>
 
            <div class="col-md-4" id="imageContainer">
-                <img class="mySlides" src="<?php echo base_url();?>images/{{item.MainImage}}">
-                <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image1}}">
-                <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image2}}">
-                <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image3}}">
+                <img class="mySlides" class="img-responsive" src="<?php echo base_url();?>images/{{item.MainImage}}">
+                <img class="mySlides" class="img-responsive" src="<?php echo base_url();?>images/{{item.Image1}}">
+                <img class="mySlides"  class="img-responsive" src="<?php echo base_url();?>images/{{item.Image2}}">
+                <img class="mySlides" class="img-responsive" src="<?php echo base_url();?>images/{{item.Image3}}">
 
                 <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
@@ -209,7 +209,7 @@
           
      }
      
-     var slideIndex = 1;
+ var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
