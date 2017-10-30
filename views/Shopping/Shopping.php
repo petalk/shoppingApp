@@ -58,7 +58,7 @@ else:
 echo form_close(); 
 endif;
 ?>
-<a href="<?php echo base_url();?>index.php/ShoppingController/check_out"> Check out</a>
+<a href="<?php echo base_url();?>index.php/order"> Check out</a>
 
 </body>
 </html>

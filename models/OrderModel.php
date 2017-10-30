@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
  
-class ItemModel extends CI_Model {
+class OrderModel extends CI_Model {
     
     protected $table_name;
     
@@ -12,7 +12,14 @@ class ItemModel extends CI_Model {
 
     public function order($data)
     {
-        $id=$this->db->insert_id($data);
+        $this->db->insert('tblorder',$data);
+        $insert_id=$this->db->insert_id();
+        return $insert_id;
     }
-
+    
+    public function orderDetail($data)
+    {
+        $this->db->insert('tblorderdetail',$data);
+    }        
+    
 }
