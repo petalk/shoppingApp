@@ -12,7 +12,7 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>/js/jquery.blueberry.js"></script>
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/blueberry.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/index.css">
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
     <div class="" id="container" ng-app="ItemApp" ng-controller="ItemController">
         
@@ -40,9 +40,9 @@
              <div class="col-md-9">
                      <div class="blueberry">
                       <ul class="slides">
-                        <li><img src="<?php echo base_url();?>/images/banner16.jpg" class="img-responsive"/></li>
-                        <li><img src="<?php echo base_url();?>/images/sense_3.jpg" /></li>
-                        <li><img src="<?php echo base_url();?>/images/Slide5.jpg" /></li>
+                        <li><img id="blueB" src="<?php echo base_url();?>/images/banner16.jpg" /></li>
+                        <li><img id="blueB" src="<?php echo base_url();?>/images/sense_3.jpg" /></li>
+                        <li><img id="blueB" src="<?php echo base_url();?>/images/Slide5.jpg" /></li>
     <!--                    <li><img src="img/slide4.jpg" /></li>-->
                       </ul>
                     <!-- Optional, see options below -->

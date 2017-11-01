@@ -8,13 +8,7 @@
     <li ng-repeat="item in Items" id="itemDetailLi">
         <div class="row rowD1">
           <div class="container"> 
-
-           <div class="col-md-4" id="imageContainer">
-
-                <img class="mySlides" class="img-responsive" src="<?php echo base_url();?>images/{{item.MainImage}}">
-                <img class="mySlides" class="img-responsive" src="<?php echo base_url();?>images/{{item.Image1}}">
-                <img class="mySlides"  class="img-responsive" src="<?php echo base_url();?>images/{{item.Image2}}">
-                <img class="mySlides" class="img-responsive" src="<?php echo base_url();?>images/{{item.Image3}}">
+           <div class="col-md-5" id="imageContainer">
                
                <?php
                     foreach($item as $i)
@@ -41,32 +35,82 @@
                 <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
            </div><!--End of Image Container-->
-            <div class="col-md-1"></div>
+
             {{messageText}}
-           
-            <div id="detContainer" class="col-md-6">
+            <div id="detContainer" class="col-md-5">
                <h2>{{item.name}}</h2>
                <hr>
                <div id="detailDescription">
-                   <p id="price">Just Rs {{item.price}} only</p>
+                   <p id="price">Just Rs. {{item.price}} Only</p>
                    <p id="desription">{{item.description}}</p>
                    <p id="">Stock - {{item.Quantity}}</p>
 <!--                   <a href="<?php echo base_url();?>index.php/OrderController/index/{{item.ID}}">Order Now</a>-->
+                     <button onclick="showPopup()" id="buyButton">Buy now</button>
                      
-                    
+                     
+               
+                       
                     <?php 
+//                              $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
+//                              echo form_open("ShoppingController/add", $attributes);
+//                    ?>   
+<!--                                 <input type="hidden" name="itemID" value="{{item.ID}}"/>
+                             <button ng-click="addCart($item)">Add to cart</button>
+                    <input onclick="showPopup()" id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Add to Cart" />-->
+                   <?php echo form_close(); ?>
+                  
+                     <div id="allPopup">  
+                        <?php
+                        if($this->session->flashdata('cartQue')=='Added')
+                        {?>
+                            <div id="boughtPopup" class="well">
+                                <h1>{{item.name}}</h1>
+                                <h4>Added to Cart Successfully</h4>
+                                <img src="<?php echo base_url();?>images/{{item.MainImage}}"><br>
+                                <button class="btn-default">
+                                    <a href="<?php echo base_url()?>index.php/ShoppingController">View Cart</a>
+                                </button>
+                                <button><a href="<?php echo base_url()?>index.php/Order">Check out</a></button>
+                                <button onclick="hidePopup()">Continue Shopping</button>
+                            </div> 
+                        <?php } ?>
+                            <div id="buyPopup" class="well">
+                            <button class="btn-danger" onclick="hide()">x</button><br>
+                            <?php
                               $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
                               echo form_open("ShoppingController/add", $attributes);
-                    ?>   
-                                 <input type="hidden" name="itemID" value="{{item.ID}}"/>
+                            ?> 
+                            <input type="number" name="quantity"><br>
+                            <input type="hidden" name="itemID" value="{{item.ID}}"/>
 <!--                             <button ng-click="addCart($item)">Add to cart</button>-->
-                                 <input id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Add to Cart" />
-                    <?php echo form_close(); ?>           
-                  
+                            <input id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Add to Cart" />
+                            </div>
+                            <?php echo form_close(); ?>
+                     
                </div>
+                     
+               </div>
+                    
+               </div>
+              <div id="detDesc" class="col-md-2">
+                  <p></p>
+                  <p><i id="faTrack" class="fa fa-truck">   Island wide Delivery</i></p><br>
+                  <p><i class="fa fa-money" aria-hidden="true">   Cash On Delivery</i></p><br>
+                  <p><i class="fa fa-quora" aria-hidden="true">   Quality Products</i></p><br>              
+               
            </div>
+            <div class="col-md-1"></div>
+            
+            <div id="detSpo" class="col-md-2">
+                  <p>Delivery</p>
+                  <p>4 to 7 Days</p>
+                         </div>
           </div>
+  
         </div> <!--End of rowD1-->
+       
+       
+        
     </li><!--End of Li items-->
     <br>
     <div class="row" id="scroller">
@@ -125,18 +169,6 @@
     
    <!----------------------Order now form------------> 
    <div id="orderNowForm"> 
-
-   <?php 
-        $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
-         echo form_open("ShoppingController/add", $attributes);
-    ?>   
-        <input type="text" name=""userName">
-        <input type="text" name="userMail">
-        <input type="text" name="userAddress">
-        <input type="number" name="userNumber">
-        <input id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Submit" />
-        <?php echo form_close(); ?>  
-
    </div> 
 </div>
 
@@ -233,8 +265,22 @@
          document.getElementById('Description').style.display="none";
           
      }
+     function showPopup()
+     {
+        document.getElementById('buyPopup').style.display="block";
+     }
+     function hidePopup()
+     {
+        document.getElementById('boughtPopup').style.display="none";
+        
+        document.getElementById('allPopup').style.display="none";
+     }
      
- var slideIndex = 1;
+     function hide()
+     {
+         document.getElementById('buyPopup').style.display="none";
+     }
+     var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {

@@ -15,6 +15,7 @@ class Welcome extends CI_Controller {
                 $this->load->view('header',$data);
 		$this->load->view('index.php');
                 $this->load->view('footer.php');
+                
                 //$this->load->view('footer.php');
 	}
         public function detail($id)

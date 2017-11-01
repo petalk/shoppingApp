@@ -40,12 +40,15 @@ class ShoppingController extends CI_Controller {
                     'id' => $item[0]['ID'],
                     'name' => $item[0]['name'],
                     'price' =>$item[0]['price'],
-                    'qty' => 1
+                    'qty' => $this->input->post('quantity')
                 );
 
                 $this->session->set_flashdata('count',$this->cart->total_items());
-                $this->cart->insert($insert_data);
-                redirect('ShoppingController');   
+                If($this->cart->insert($insert_data));
+                {
+                    $this->session->set_flashdata('cartQue','Added');
+                }
+                redirect('Welcome/detail/'.$id);   
         }      
     }
 

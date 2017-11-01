@@ -33,7 +33,8 @@
                     <h3 style="text-align:center">Information<hr></h3>
                     <ul class="info">
                         <li>About Us</li>
-                        <li>Terms and Conditions</li>
+                        <li>Contact Us</li>
+                        <li>Terms and Conditions</a></li>
                         <li>Privacy Policy</li>
                         <li>Careers</li>
                     </ul>
@@ -70,7 +71,7 @@ footer-navbar end-->
                
             }
             #ft-h3{
-                color: black;
+                color: gray;
                 font-size: 12pt;
                 margin-left: -40pt;
                 font-family: Adobe Garamond Pro Bold;
