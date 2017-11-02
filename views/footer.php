@@ -139,5 +139,18 @@ footer-navbar end-->
                 color:gray;
                 list-style-type: circle;
             }
+            @media screen and (max-width: 768px){
+                #footerCol1{
+                    margin-left: 14%;
+                    border-right: none;
+                }
+                #fIcon,#tIcon,#wIcon,#gIcon{
+                    font-size: 12px;
+                    padding: 4px 6px 4px 6px;
+                }
+                #gIcon{
+                    padding: 5px 6px 5px 6px;
+                }
+            }
             
         </style>
