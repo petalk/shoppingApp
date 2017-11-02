@@ -15,7 +15,7 @@ class ShoppingController extends CI_Controller {
 
     public function index()
     {
-        $data['count']=$this->cart->total_items();
+        $data['count']=count($this->cart->contents());
         $data['products']=$this->ItemModel->getItems();
         $this->load->view('header.php',$data);
         $this->load->view('Shopping/Shopping.php',$data);
@@ -66,6 +66,29 @@ class ShoppingController extends CI_Controller {
         redirect('ShoppingController');
     }
     
+    public function updateCart()
+    {
+       $total = count($this->cart->contents());
+        
+       // Retrieve the posted information
+       $item = $this->input->post('rowid');
+       $qty = $this->input->post('qty');
+        
+       $data=array();
+       // Cycle true all items and update them
+       for($i=0;$i < $total; $i++)
+       {
+           // Create an array with the products rowid's and quantities. 
+           $data = array(
+              'rowid' => $item[$i],
+              'qty'   => $qty[$i]
+           );
+            
+           // Update the cart with the new information
+           $this->cart->update($data);
+       }
+        redirect('ShoppingController');
+    }
     public function check_out()
     {
         $this->form_validation->set_rules('userName','Name','required|min_length[2]|max_length[50]');

@@ -10,28 +10,30 @@ class Order extends CI_Controller {
             $this->load->library('cart');     
         }
            
-//	public function index($id)
-//	{       
-//                $data['count']=$this->cart->total_items();  
-//                $data['productID']=$id;
-//                $this->load->view('header',$data);
-//		        $this->load->view('Order/order.php',$data);
-//                $this->load->view('footer.php');
-//                //$this->load->view('footer.php');
-//        }
-        
+       //should be accessed only by - Detail.php 
        public function index()
        {
            $data['count']=$this->cart->total_items();   
-           //$data['productID']=$id;
-           $this->load->view('header',$data);
-           $this->load->view('Order/order.php',$data);
-           $this->load->view('footer.php');  
+           $data['productID']=$this->input->post('itemID');
+           $data['quantity']=$this->input->post('quantity');
+           $this->load->model('ItemModel');
+           $data['product']=$this->ItemModel->getAllDetailById($data['productID']);
+           
+           if($data['product']!=null)    
+           {    
+               $this->load->view('header',$data);
+               $this->load->view('Order/order.php',$data);
+               $this->load->view('footer.php');
+           }
+           else{
+               redirect('');
+           }
        }        
         
     public function addOrder()
     {
         $productID=$this->input->post('productID');
+        $qty=$this->input->post('quantity');
         $this->load->model(array('ItemModel','OrderModel'));
         $item = $this->ItemModel->getItemsById($productID);
         $data=array(
@@ -42,7 +44,7 @@ class Order extends CI_Controller {
             'userAddress'=>$this->input->post('userAddress'),
             'UserTown'=>$this->input->post('userTown'),
             'UserDistrict'=>$this->input->post('userDistrict'),
-            'Total'=>$item[0]['price']
+            'Total'=>$item[0]['price']*$qty
         );
         
         $insert_id=$this->OrderModel->order($data);
@@ -51,8 +53,8 @@ class Order extends CI_Controller {
                 'OrderID'=>$insert_id,
                 'ProductID'=>$productID,
                 'Price'=>$item[0]['price'],
-                'Quantity'=>1,
-                'Subtotal'=>$item[0]['price']*1,    
+                'Quantity'=>$qty,
+                'Subtotal'=>$item[0]['price']*$qty,    
             );
             $this->OrderModel->orderDetail($data);
             $this->session->set_flashdata('orderStatus',"Order Added Sucessfully : "+$insert_id);

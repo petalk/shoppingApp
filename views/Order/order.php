@@ -1,17 +1,42 @@
   
+    <div class="container">
+        <div class="col-md-1"></div>
+        <div id="OrderDetail" class="col-md-10">
+            <div id="prodImage">
+                <img src="<?php echo base_url()?>images/<?php echo $product[0]['MainImage'] ?>"> 
+            </div>
+             <div id="prodQty">
+                <h4>Qty</h4> 
+                <?php echo $quantity ?>
+            </div>   
+            <div id="prodName">
+                <h4>Item Description</h4> 
+                <?php echo $product[0]['name'] ?>
+            </div> 
+             <div id="prodPrice">
+                <h4>Price</h4>
+                <?php echo $product[0]['price'] ?>
+            </div>
+            <div id="prodTotal">
+                 <h4>Total</h4>
+                <?php echo $product[0]['price'] * $quantity ?>
+            </div>   
+        </div>    
+    </div>    
+
    <!----------------------Order now form------------> 
    <div id="orderNowForm"> 
        
-    
    <?php 
         $attributes = array("class" => "well", "id" => "shopform", "name" => "shopform");
-         echo form_open("ShoppingController/check_out", $attributes);
+         echo form_open("Order/addOrder", $attributes);
     ?>  
         <p class="alert-danger">   
             <?php echo $this->session->flashdata('orderStatus'); ?>
-        </p>  <!--
+        </p>  
         
-        <input type="hidden" name="productID" value="<?php // echo $productID ?>"/> -->
+        <input type="hidden" name="productID" value="<?php echo $productID ?>"/> 
+        <input type="hidden" name="productID" value="<?php echo $quantity ?>"/> 
         <div id="userName" class="formDiv">
             <label for="userName">
                 <i class="fa fa-user"></i> Name *
@@ -80,7 +105,7 @@
             width:50%;
             margin-left:25%;
             background:white;
-            margin-top:5%;
+            margin-top:2%;
             margin-bottom:5%;
             border-radius:360px 0px 360px 0px;
             border-left:solid orange;
@@ -112,6 +137,23 @@
         }
         i{
             
+        }
+        #prodImage img{
+            width:100px;
+            height:80px;
+        }
+        #OrdreDetail{    
+            border:1px dotted orange;
+        }
+        #OrderDetail div{
+            margin-top:5%;
+            margin-bottom:;
+            padding:20pt;
+            display:inline-block;
+           
+        }
+        #OrderDetail h4{
+            color:;
         }
         @media screen and (max-width:900px) {
             form{

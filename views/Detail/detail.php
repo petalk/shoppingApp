@@ -23,7 +23,7 @@
                             <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image2}}"> 
                         <?php }
                         if($i['Image3']!=null){?>
-                         <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image3}}"> 
+                            <img class="mySlides" src="<?php echo base_url();?>images/{{item.Image3}}"> 
                         <?php }    
                     }
                ?>
@@ -45,8 +45,8 @@
                    <p id="desription">{{item.description}}</p>
                    <p id="">Stock - {{item.Quantity}}</p>
 <!--                   <a href="<?php echo base_url();?>index.php/OrderController/index/{{item.ID}}">Order Now</a>-->
-                     <button onclick="showPopup()" id="buyButton">Buy now</button>
-                     
+                     <button onclick="showPopup()" id="buyButton">Add to Cart</button>
+                     <button onclick="showBuynow()" id="buyButton">Buy now</button>
                      
                
                        
@@ -59,35 +59,37 @@
                     <input onclick="showPopup()" id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Add to Cart" />-->
                    <?php echo form_close(); ?>
                   
-                     <div id="allPopup">  
-                        <?php
-                        if($this->session->flashdata('cartQue')=='Added')
-                        {?>
-                            <div id="boughtPopup" class="well">
-                                <h1>{{item.name}}</h1>
-                                <h4>Added to Cart Successfully</h4>
-                                <img src="<?php echo base_url();?>images/{{item.MainImage}}"><br>
-                                <button class="btn-default">
-                                    <a href="<?php echo base_url()?>index.php/ShoppingController">View Cart</a>
-                                </button>
-                                <button><a href="<?php echo base_url()?>index.php/Order">Check out</a></button>
-                                <button onclick="hidePopup()">Continue Shopping</button>
-                            </div> 
-                        <?php } ?>
-                            <div id="buyPopup" class="well">
-                            <button class="btn-danger" onclick="hide()">x</button><br>
-                            <?php
-                              $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
-                              echo form_open("ShoppingController/add", $attributes);
-                            ?> 
-                            <input type="number" name="quantity"><br>
-                            <input type="hidden" name="itemID" value="{{item.ID}}"/>
-<!--                             <button ng-click="addCart($item)">Add to cart</button>-->
-                            <input id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Add to Cart" />
-                            </div>
-                            <?php echo form_close(); ?>
                      
-               </div>
+                  <div id="BuynowPopup" class="well">
+                        <button class="btn-danger" onclick="hide()">x</button><br>
+                        <?php
+                          $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
+                          echo form_open("Order", $attributes);
+                        ?> 
+                        <input type="number" name="quantity" placeholder="Quantity"><br>
+                        <input type="hidden" name="itemID" value="{{item.ID}}"/>
+    <!--                             <button ng-click="addCart($item)">Add to cart</button>-->
+                        <input id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Submit" />
+                        <?php echo form_close(); ?>  
+                  </div>
+                  <!--END of Buynow POPUP, Rises when buynow is clicked-->
+                     
+            
+                <div id="CartPopup" class="well">
+                        <button class="btn-danger" onclick="hide()">x</button><br>
+                        <?php
+                          $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
+                          echo form_open("ShoppingController/add", $attributes);
+                        ?> 
+                        <input type="number" name="quantity" placeholder="Quantity"><br>
+                        <input type="hidden" name="itemID" value="{{item.ID}}"/>
+    <!--                             <button ng-click="addCart($item)">Add to cart</button>-->
+                        <input id="btn_login" name="btn_login" type="submit" class="btn btn-default" value="Add to Cart" />
+                        <?php echo form_close(); ?>
+                  </div>
+                  <!--END of CartPopup POPUP, Rises when add to cart is clicked-->  
+                     
+            
                      
                </div>
                     
@@ -267,18 +269,19 @@
      }
      function showPopup()
      {
-        document.getElementById('buyPopup').style.display="block";
+        document.getElementById('CartPopup').style.display="block";
      }
-     function hidePopup()
+     function showBuynow()
      {
-        document.getElementById('boughtPopup').style.display="none";
-        
-        document.getElementById('allPopup').style.display="none";
+        document.getElementById('BuynowPopup').style.display="block";
      }
+     
+ 
      
      function hide()
      {
-         document.getElementById('buyPopup').style.display="none";
+         document.getElementById('CartPopup').style.display="none";
+         document.getElementById('BuynowPopup').style.display="none";
      }
      var slideIndex = 1;
 showDivs(slideIndex);

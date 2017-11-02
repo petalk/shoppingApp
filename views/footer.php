@@ -14,16 +14,14 @@
                         </h3>
                     </a>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-3" id="raw2">
-                    <h3 style="text-align:center">Stay Connected<hr></h3><br>
-                    
+              
+                <div class="col-md-4" id="raw2">
+                    <h3 style="text-align:center">Stay Connected<hr></h3>
                     <ul class="list-inline">
                         <li><a href="https://www.facebook.com/Petalk-2046551062235157/"target="_blank"><i id="fIcon" class="fa fa-facebook"></i></a></li>
                         <li><i id="wIcon" class="fa fa-whatsapp"></i></li>
                         <li><a href="https://twitter.com/peta_lk"target="_blank"><i id="tIcon" class="fa fa-twitter"></i></a></li>
                         <li><a href="https://plus.google.com/u/2/101223230172545134012"target="_blank"><i id="gIcon" class="fa fa-google-plus"></i></a></li>
-                        
                     </ul>
                 </div>
                 
@@ -60,7 +58,7 @@ footer-navbar end-->
                   background-color:white;
                   border-top:solid orange;
                   color: black;
-                  height:200pt;
+                  height:auto;
                   
             }   
             #ftlogo{
@@ -91,14 +89,18 @@ footer-navbar end-->
                 padding: 0;
             }
             #footerCol1{
-                border-right:solid orange;
+                border-right:none;
             }
             #fIcon,#tIcon,#wIcon,#gIcon{
                 padding:10px 15px 10px 15px;
                 border-radius:360px;
                 border:solid gray;
-                font-size:18pt;
+                font-size:14pt;
                 color:black;
+            }
+            .list-inline{
+                margin-left:5%;
+                margin-top:0%;
             }
             #gIcon{
                 padding:8px 6px 8px 6px;

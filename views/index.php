@@ -12,12 +12,15 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>/js/jquery.blueberry.js"></script>
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/blueberry.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/index.css">
+ 
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
+    <html>
+    <body>
     <div class="" id="container" ng-app="ItemApp" ng-controller="ItemController">
         
         <div class="container" style="width:100%;">
-           
+            <button id="scrolRight">></button>
             <ul id="scrollingList" class="scrollingList" style="border:none;">
                    <li ng-repeat="item in Items" id="content">
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
@@ -25,15 +28,11 @@
 <!--                            Stock : {{item.Quantity}} <br>-->
                             <span ng-hide="item.oldprice==0" id="oldprice"><i><del>Rs.  {{item.oldprice}}.00</del></i></span><br>
                             <span id="price">Rs.   {{item.price}}.00 <br><br>
-                            
-                                <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">Watch</a>
+                            <a href="http://localhost/eCommerce/index.php/Welcome/detail/{{item.ID}}">Watch</a>
                     </li> 
-                  
             </ul> 
-           
         </div>
-        
-      
+  
      <div class="row" id="bannerRow">
          <div class="container-fluid">
              <div class="col-md-0"></div>
