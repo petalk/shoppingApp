@@ -15,7 +15,7 @@
                     </a>
                 </div>
               
-                <div class="col-md-4" id="raw2">
+                <div class="col-md-3" id="raw2">
                     <h3 style="text-align:center">Stay Connected<hr></h3>
                     <ul class="list-inline">
                         <li><a href="https://www.facebook.com/Petalk-2046551062235157/"target="_blank"><i id="fIcon" class="fa fa-facebook"></i></a></li>
@@ -37,7 +37,7 @@
                         <li>Careers</li>
                     </ul>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <h3 style="text-align:center">Our Service<hr> </h3>
                     <ul class="service">
                         <li>FAQ</li>
@@ -56,7 +56,7 @@ footer-navbar end-->
         <style>
             #footer-navbar{
                   background-color:white;
-                  border-top:solid orange;
+                  border-top:solid skyblue;
                   color: black;
                   height:auto;
                   
@@ -87,6 +87,7 @@ footer-navbar end-->
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
+                
             }
             #footerCol1{
                 border-right:none;
@@ -140,6 +141,22 @@ footer-navbar end-->
             .info li,.service li{
                 color:gray;
                 list-style-type: circle;
+            }
+            @media screen and (max-width: 768px){
+                #footerCol1{
+                    margin-left: 14%;
+                    border-right: none;
+                }
+                #fIcon,#tIcon,#wIcon,#gIcon{
+                    font-size: 12px;
+                    padding: 4px 6px 4px 6px;
+                }
+                #gIcon{
+                    padding: 5px 6px 5px 6px;
+                }
+                #raw2 ul {
+                    text-align: center;
+                }
             }
             
         </style>

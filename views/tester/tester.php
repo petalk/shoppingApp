@@ -1,101 +1,374 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
 <html>
-<head>
-	<title>Demo - jQuery Smooth Div Scroll - Thomas Kahn</title>
-	
-	<!-- the CSS for Smooth Div Scroll -->
-	<link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
-	
-	<!-- Styles for my specific scrolling content -->
-	<style type="text/css">
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>slick/slicker/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>slick/slicker/slick/slick-theme.css"/>
+<!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>slick/slicker/slick/slick.min.js"></script>-->
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
 
-		#makeMeScrollable
-		{
-			width:100%;
-			height: 330px;
-			position: relative;
-		}
-		
-		/* Replace the last selector for the type of element you have in
-		   your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
-		   if you have links use #makeMeScrollable div.scrollableArea a and so on. */
-		#makeMeScrollable div.scrollableArea img
-		{
-			position: relative;
-			float: left;
-			margin: 0;
-			padding: 0;
-			/* If you don't want the images in the scroller to be selectable, try the following
-			   block of code. It's just a nice feature that prevent the images from
-			   accidentally becoming selected/inverted when the user interacts with the scroller. */
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-o-user-select: none;
-			user-select: none;
-		}
-	</style>
+    * {
+      box-sizing: border-box;
+    }
 
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
 </head>
-
 <body>
 
-	<div id="makeMeScrollable">
-		<img src="images/demo/field.jpg" alt="Demo image" id="field" />
-		<img src="images/demo/gnome.jpg" alt="Demo image" id="gnome" />
-		<img src="images/demo/pencils.jpg" alt="Demo image" id="pencils" />
-		<img src="images/demo/golf.jpg" alt="Demo image" id="golf" />
-		<img src="images/demo/river.jpg" alt="Demo image" id="river" />
-		<img src="images/demo/train.jpg" alt="Demo image" id="train" />
-		<img src="images/demo/leaf.jpg" alt="Demo image" id="leaf" />
-		<img src="images/demo/dog.jpg" alt="Demo image" id="dog" />
-	</div>
+  <section class="vertical-center-4 slider">
+    <div>
+      <img src="http://placehold.it/350x100?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=6">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=7">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=8">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=9">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=10">
+    </div>
+  </section>
 
-	<!-- LOAD JAVASCRIPT LATE - JUST BEFORE THE BODY TAG 
-	     That way the browser will have loaded the images
-		 and will know the width of the images. No need to
-		 specify the width in the CSS or inline. -->
+  <section class="vertical-center-3 slider">
+    <div>
+      <img src="http://placehold.it/350x100?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=6">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=7">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=8">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=9">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=10">
+    </div>
+  </section>
 
-	<!-- jQuery library - Please load it from Google API's -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+  <section class="vertical-center-2 slider">
+    <div>
+      <img src="http://placehold.it/350x100?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=6">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=7">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=8">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=9">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=10">
+    </div>
+  </section>
 
-	<!-- jQuery UI (Custom Download containing only Widget and Effects Core)
-	     You can make your own at: http://jqueryui.com/download -->
-	<script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
-	
-	<!-- Latest version (3.1.4) of jQuery Mouse Wheel by Brandon Aaron
-	     You will find it here: https://github.com/brandonaaron/jquery-mousewheel -->
-	<script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
+  <section class="vertical-center slider">
+    <div>
+      <img src="http://placehold.it/350x100?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=6">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=7">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=8">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=9">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=10">
+    </div>
+  </section>
 
-	<!-- jQuery Kinectic (1.8.2) used for touch scrolling -->
-	<!-- https://github.com/davetayls/jquery.kinetic/ -->
-	<script src="js/jquery.kinetic.min.js" type="text/javascript"></script>
+  <section class="vertical slider">
+    <div>
+      <img src="http://placehold.it/350x100?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=6">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=7">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=8">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=9">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=10">
+    </div>
+  </section>
+  <section class="regular slider">
+    <div>
+      <img src="http://placehold.it/350x300?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=6">
+    </div>
+  </section>
 
-	<!-- Smooth Div Scroll 1.3 minified-->
-	<script src="js/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
+  <section class="center slider">
+    <div>
+      <img src="http://placehold.it/350x300?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=6">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=7">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=8">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=9">
+    </div>
+  </section>
 
-	<!-- If you want to look at the uncompressed version you find it at
-	     js/jquery.smoothDivScroll-1.3.js -->
+  <section class="variable slider">
+    <div>
+      <img src="http://placehold.it/350x300?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/200x300?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/100x300?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/200x300?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/300x300?text=6">
+    </div>
+  </section>
 
-	<!-- Plugin initialization -->
-	<script type="text/javascript">
-		// Initialize the plugin with no custom options
-		$(document).ready(function () {
-			// None of the options are set
-			$("div#makeMeScrollable").smoothDivScroll({
-				autoScrollingMode: "onStart"
-			});
-		});
-	</script>
-          <h1>iiiiiiiiii</h1> 
-          <h2>I made a change</h2>  
-		  <h3>I have made another change</h3>
+  <section class="lazy slider" data-sizes="50vw">
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, http://placehold.it/960x300?text=1-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, http://placehold.it/960x300?text=2-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="http://placehold.it/650x300?text=3-650w 650w, http://placehold.it/960x300?text=3-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=4-350w"  data-srcset="http://placehold.it/650x300?text=4-650w 650w, http://placehold.it/960x300?text=4-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
+    </div>
+    <div>
+      <!-- this slide should inherit the sizes attr from the parent slider -->
+      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="<?php echo base_url();?>slick/slicker/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".vertical-center-4").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 2
+      });
+      $(".vertical-center-3").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".vertical-center-2").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      });
+      $(".vertical-center").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+      });
+      $(".vertical").slick({
+        dots: true,
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 3
+      });
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+    });
+</script>
+
 </body>
 </html>

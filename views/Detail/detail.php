@@ -119,7 +119,7 @@
         <div class="container">
             <ul id="scrollingList">
                 
-                   <li ng-repeat="item in AllItems" id="items">
+                   <li ng-repeat="item in AllItems" id="items" class="well">
                              
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>

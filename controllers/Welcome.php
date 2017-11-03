@@ -7,13 +7,16 @@ class Welcome extends CI_Controller {
             parent::__construct();
             $this->load->library('session');
             $this->load->helper('form');
-            $this->load->library('cart');     
+            $this->load->library('cart');
+            $this->load->model(array('ItemModel'));
         }
 	public function index()
 	{       
-                $data['count']=$this->cart->total_items();  
+                $data['count']=count($this->cart->contents());
+                $data['items']=$this->ItemModel->getItems();
                 $this->load->view('header',$data);
-		$this->load->view('index.php');
+              
+		$this->load->view('index.php',$data);
                 $this->load->view('footer.php');
                 
                 //$this->load->view('footer.php');
@@ -27,5 +30,11 @@ class Welcome extends CI_Controller {
                 $this->load->view('header',$data);
                 $this->load->view('Detail/detail.php',$data);
                 $this->load->view('footer.php');
-        }        
+        }   
+        
+        public function tester()
+        {
+            $data['items']=$this->ItemModel->getItems();
+            $this->load->view('slick/slicker/index.php',$data);
+        }
 }
