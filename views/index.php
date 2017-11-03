@@ -19,7 +19,7 @@
         <div class="container" style="width:100%;">
            
             <ul id="scrollingList" class="scrollingList" style="border:none;">
-                   <li ng-repeat="item in Items" id="content">
+                   <li ng-repeat="item in Items" id="content" class="well">
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>
 <!--                            Stock : {{item.Quantity}} <br>-->
@@ -63,9 +63,9 @@
     
     <div class="row" id="scroller" class="">
         <div class="container" id="content">
-            <li id="HeadingScrollingList" class="">Top Deals</li>
+            <li id="HeadingScrollingList" class="">Top Deals<hr></li>
             <ul id="scrollingList">
-                   <li ng-repeat="item in Items" id="content">
+                   <li ng-repeat="item in Items" class="well" id="content">
                             <img src="<?php echo base_url(); ?>/images/{{item.MainImage}}"><br>
                             <span id="itemName">{{item.name}}</span><br>
 <!--                            Stock : {{item.Quantity}} <br>-->

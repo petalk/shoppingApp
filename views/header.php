@@ -51,8 +51,8 @@
                 <div class="row row2">
                     <div class="col-sm-2">
                         <a href="<?php echo base_url();?>" id="siteName">
-                        <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()"><img id="logo" src="<?php echo base_url();?>logo/LOGO.png" id></span></h2>
-                        <h1 style="margin:0px;"><span class="largenav"><img id="logo" src="<?php echo base_url();?>logo/LOGO.png" id></span></h1>
+                        <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()"><img id="logo" src="<?php echo base_url();?>logo/LOGO1.png" id></span></h2>
+                        <h1 style="margin:0px;"><span class="largenav"><img id="logo" src="<?php echo base_url();?>logo/LOGO1.png" id></span></h1>
                         </a>
                     </div>
                     <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">

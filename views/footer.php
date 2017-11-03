@@ -58,7 +58,7 @@ footer-navbar end-->
         <style>
             #footer-navbar{
                   background-color:white;
-                  border-top:solid orange;
+                  border-top:solid skyblue;
                   color: black;
                   height:200pt;
                   
@@ -89,9 +89,10 @@ footer-navbar end-->
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
+                
             }
             #footerCol1{
-                border-right:solid orange;
+                border-right:1px solid skyblue;
             }
             #fIcon,#tIcon,#wIcon,#gIcon{
                 padding:10px 15px 10px 15px;
@@ -150,6 +151,9 @@ footer-navbar end-->
                 }
                 #gIcon{
                     padding: 5px 6px 5px 6px;
+                }
+                #raw2 ul {
+                    text-align: center;
                 }
             }
             
