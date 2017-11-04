@@ -108,7 +108,7 @@
             margin-top:2%;
             margin-bottom:5%;
             border-radius:360px 0px 360px 0px;
-            border-left:solid orange;
+            border-left:skyblue;
             border-right:solid black;
         }
         input[type="text"],input[type="number"]
@@ -120,16 +120,24 @@
         }
         input[type="text"]:focus,input[type="number"]:focus{
             border:none;
-            border-bottom:solid orange;
+            border-bottom:skyblue;
         }
         input[type="submit"]
         {
-            border:1px black;
+            border:1px solid black;
             background:none;
-            color:orange;
+            color:#002166;
             width:60%;
             margin-left:20%;
             margin-top:2%;
+            opacity: 0.5;
+            font-size: 14pt;
+        }
+        input[type="submit"]:hover{
+            opacity: 1.5;
+            color: blue;
+            font-size: 14pt;
+            font-family: Aharoni;
         }
         label{
             margin-left:20%;

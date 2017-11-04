@@ -5,8 +5,8 @@
             <div class="container">
                 <div class="col-md-3" id="footerCol1">
                    <a href="<?php echo base_url();?>" id="siteName">
-                        <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()"><img id="ftlogo" src="<?php echo base_url();?>logo/LOGO.png" id></span></h2>
-                        <h1 style="margin:0px;"><span class="largenav"><img id="ftlogo" src="<?php echo base_url();?>logo/LOGO.png" id></span></h1>
+                        <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()"><img id="ftlogo" src="<?php echo base_url();?>logo/LOGO1.png" id></span></h2>
+                        <h1 style="margin:0px;"><span class="largenav"><img id="ftlogo" src="<?php echo base_url();?>logo/LOGO1.png" id></span></h1>
                         <h3 id="ft-h3"><b>Online Shopping In Srilanka<b><br>
                                     <br>#326, Main Street, Colombo 11<br><br>
                             Hot Line : 077 3200625<br><br>

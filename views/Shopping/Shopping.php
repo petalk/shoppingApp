@@ -167,8 +167,9 @@ endif;
         
     }
     #headerCart td{
-       background:orange;
+       background:#00aced;
        color:white;
+       font-family: Cooper Std Black;
     }
     tbody tr td{
         height:70pt;
@@ -181,25 +182,43 @@ endif;
         background:white;
     }
     #totalRow{
-        border-top:solid black;
+        border-top:solid #000033;
        
     }
     #totalRow td{
          height:40pt;
     }
     #tdTotal{
-       background:black;
-       color:orange;
+        background:#000033;
+       color:white;
         text-align:center;
+      border-radius: 5pt;
+       font-family: Arial Rounded MT Bold;
+      
+
        
     }
     #cartBut,#updatecart,#cartButcheck{
-        background:yellow;
+        background:#00aced;
         color:black;
         border:none;
+        border-radius: 360pt;
         padding:5pt 15pt 5pt 15pt;
         text-decoration:none;
+        opacity: 0.6;
     }
+    #cartBut,#updatecart,#cartButcheck:hover{
+        opacity: 1;
+        color: white;
+        background:#00aced;
+    }
+    #updatecart{
+        opacity: 0.6;
+    }
+    #updatecart:hover{
+        opacity: 1;
+    }
+   
     #cartButcheck{
         
         background:#00aced;
