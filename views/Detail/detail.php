@@ -37,17 +37,56 @@
            </div><!--End of Image Container-->
 
             {{messageText}}
-            <div id="detContainer" class="col-md-5">
+            <div id="detContainer" class="col-md-7">
                <h2>{{item.name}}</h2>
                <hr>
                <div id="detailDescription">
-                   <p id="price">Just Rs. {{item.price}} Only</p>
+                   <div>
+                        <p id="price">Rs. {{item.price}}</p> 
+                       
+                   </div>
                    <p id="desription">{{item.description}}</p>
-                   <p id="">Stock - {{item.Quantity}}</p>
+                   <p id="">Available units - {{item.Quantity}}</p>
 <!--                   <a href="<?php echo base_url();?>index.php/OrderController/index/{{item.ID}}">Order Now</a>-->
-                     <button onclick="showPopup()" id="buyButton">Add to Cart</button>
-                     <button onclick="showBuynow()" id="buyButton">Buy now</button>
-                     
+                        <div id="sorr">
+                            <div class="type-1">
+                            <div>
+                                <a href="" class="btn btn-1" id="iBuy" onclick="showBuynow()">
+                                <span class="txt">Buy now</span>
+                                <span class="round"><i class="fa fa-chevron-right"></i></span>
+                                </a>
+                            </div> 
+                            </div> 
+                        </div> 
+                        <div id="sorr">
+                            <div class="type-1">
+                            <div>
+                                <a href="" class="btn btn-1"  onclick="showPopup()">
+                                <span class="txt">Add to cart</span>
+                                <span class="round" id="icart"><i class="fa fa-shopping-cart"></i></span>
+                                </a>
+                            </div> 
+                            </div> 
+                        </div>
+                        <div id="sorr">
+                            <div class="type-1">
+                            <div>
+                                <a href="" class="btn btn-1" onclick="showPopup()">
+                                <span class="txt">wish list</span>
+                                <span class="round" id="iheart"><i class="fa fa-heart"></i></span>
+                                </a>
+                            </div> 
+                            </div> 
+                        </div>  
+
+                     <!--button onclick="showBuynow()" id="detBut">
+                        <i class="fa fa-money"></i>  Buy now</button-->
+                     <!--button onclick="showPopup()" id="detBut">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                     <button onclick="" id="detBut">
+                        <i class="fa fa-heart" id="faheart"></i> Add to wish list
+                     </button-->
                
                        
                     <?php 
@@ -66,6 +105,7 @@
                           $attributes = array("class" => "form-horizontal", "id" => "shopform", "name" => "shopform");
                           echo form_open("Order", $attributes);
                         ?> 
+                            
                         <input type="number" name="quantity" placeholder="Quantity"><br>
                         <input type="hidden" name="itemID" value="{{item.ID}}"/>
     <!--                             <button ng-click="addCart($item)">Add to cart</button>-->
@@ -88,34 +128,38 @@
                         <?php echo form_close(); ?>
                   </div>
                   <!--END of CartPopup POPUP, Rises when add to cart is clicked-->  
-                     
+            </div>
             
-                     
-               </div>
-                    
-               </div>
-              <div id="detDesc" class="col-md-2">
-                  <p></p>
-                  <p><i id="faTrack" class="fa fa-truck">   Island wide Delivery</i></p><br>
-                  <p><i class="fa fa-money" aria-hidden="true">   Cash On Delivery</i></p><br>
-                  <p><i class="fa fa-quora" aria-hidden="true">   Quality Products</i></p><br>              
-               
-           </div>
-            <div class="col-md-1"></div>
+            <div id="detDesc" class="">
+                <p>Sold by : Peta.lk</p>  
+                <p>Delivery : Delivery within 4 to 7 Business Days</p>
+            </div>  
             
-            <div id="detSpo" class="col-md-2">
-                  <p>Delivery</p>
-                  <p>4 to 7 Days</p>
-                         </div>
           </div>
   
         </div> <!--End of rowD1-->
        
+        <div class="container">        
+            <div id="detDesc" class="col-md-4" >
+                <i id="faTrack" class="fa fa-truck"></i>
+                <br>Island wide Delivery    
+            </div>
+            <div id="detDesc" class="col-md-4">        
+                <i class="fa fa-money" aria-hidden="true"></i>
+                <br> Cash On Delivery
+            </div>
+            <div id="detDesc" class="col-md-4">    
+                <i class="fa fa-quora" aria-hidden="true"></i>
+                <br> Quality products           
+            </div> 
+            
+            
+        </div>        
        
         
     </li><!--End of Li items-->
     <br>
-    <div class="row" id="scroller">
+    <!--div class="row" id="scroller">
         <div class="container">
             <ul id="scrollingList">
                 
@@ -130,7 +174,12 @@
                     
             </ul>
         </div>
-    </div>
+    </div-->
+
+    <?php
+        $data['content']=$items;
+        $this->load->view('slick/responsive.php',$data);
+    ?>
     
     <div class="row">
       <div class="container">  
@@ -168,12 +217,119 @@
         </div>
    </div>
    </div>
-    
-   <!----------------------Order now form------------> 
-   <div id="orderNowForm"> 
-   </div> 
+
 </div>
 
+  <!--Link for sliders----->    
+    <script src="<?php echo base_url();?>js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url();?>slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="<?php echo base_url();?>js/myslider.js"></script>    
+  <!--End of sliders-------->
+<style>
+    #sorr > div {
+  width: 33%;
+  float:left;
+}
+#sorr > div > div {
+  margin-bottom: 10px;
+}
+
+.btn-1 {
+  background-color:none;
+}
+#iHeart{
+    background:red;
+}
+#icart{
+    background:orange;
+}
+.btn-1 .round {
+  background-color:#0080ff;
+}
+
+.btn-2 {
+  background-color: #00AFD1;
+}
+.btn-2 .round {
+  background-color: #00c4eb;
+}
+
+.btn-3 {
+  background-color: #5A5B5E;
+}
+.btn-3 .round {
+  background-color: #737478;
+}
+
+#sorr a {
+  text-decoration: none;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  padding: 12px 53px 12px 23px;
+  color: black;
+  text-transform: ;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: relative;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+}
+ a span {
+  position: relative;
+  z-index: 3;
+}
+ a .round {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  right: 4px;
+  top: 3px;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 2;
+}
+#sorr a .round i {
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  left: 40%;
+  margin-left: -4px;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.txt {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.type-1 a:hover {
+  padding-left: 68px;
+  padding-right: 28px;
+}
+.type-1 a:hover .round {
+  width: calc(100% - 6px);
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+.type-1 a:hover .round i {
+  position:fixed;
+  display:none;
+}
+
+</style>    
 <script>
     var app = angular.module('ItemApp', []);
         app.controller('ItemController', function($scope, $http) {

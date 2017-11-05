@@ -26,6 +26,7 @@ class Welcome extends CI_Controller {
                 $data['count']=$this->cart->total_items();    
                 $data["id"]=$id;
                 $this->load->model(array('ItemModel'));
+                $data['items']=$this->ItemModel->getItems();
                 $data["item"]=$this->ItemModel->getAllDetailById($id);
                 $this->load->view('header',$data);
                 $this->load->view('Detail/detail.php',$data);
@@ -35,6 +36,6 @@ class Welcome extends CI_Controller {
         public function tester()
         {
             $data['items']=$this->ItemModel->getItems();
-            $this->load->view('slick/slicker/index.php',$data);
+            $this->load->view('tester/tester.php',$data);
         }
 }

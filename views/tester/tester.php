@@ -1,374 +1,167 @@
-<html>
-  <head>
-  <title>My Now Amazing Webpage</title>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>slick/slicker/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>slick/slicker/slick/slick-theme.css"/>
-<!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script type="text/javascript" src="<?php echo base_url()?>slick/slicker/slick/slick.min.js"></script>-->
-  <style type="text/css">
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
+ <section class="single-item-rtl slider">
+                        <div>
+                            <img src="<?php echo base_url();?>/images/banner16.jpg">
+                        </div>
+                        <div>
+                            <img src="<?php echo base_url();?>/images/sense_3.jpg">
+                        </div>
+                        <div>
+                            <img src="<?php echo base_url();?>/images/Slide5.jpg">
+                        </div>
+                       
+</section>
 
-    * {
-      box-sizing: border-box;
-    }
+<div class="type-1">
+  <div>
+    <a href="" class="btn btn-1">
+      <span class="txt">Hover me</span>
+      <span class="round"><i class="fa fa-chevron-right"></i></span>
+    </a>
+  </div>
+  <style>
+      body {
+  margin: 10px;
+  text-align: center;
+}
+body > div {
+  width: 33%;
+  float: left;
+}
+body > div > div {
+  margin-bottom: 15px;
+}
 
-    .slider {
-        width: 50%;
-        margin: 100px auto;
-    }
+.btn-1 {
+  background-color: #F27935;
+}
+.btn-1 .round {
+  background-color: #f59965;
+}
 
-    .slick-slide {
-      margin: 0px 20px;
-    }
+.btn-2 {
+  background-color: #00AFD1;
+}
+.btn-2 .round {
+  background-color: #00c4eb;
+}
 
-    .slick-slide img {
-      width: 100%;
-    }
+.btn-3 {
+  background-color: #5A5B5E;
+}
+.btn-3 .round {
+  background-color: #737478;
+}
 
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
+a {
+  text-decoration: none;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  padding: 12px 53px 12px 23px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: relative;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+}
+a span {
+  position: relative;
+  z-index: 3;
+}
+a .round {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 2;
+}
+a .round i {
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  left: 50%;
+  margin-left: -4px;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 
+.txt {
+  font-size: 14px;
+  line-height: 1.45;
+}
 
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-    }
-    
-    .slick-active {
-      opacity: .5;
-    }
+.type-1 a:hover {
+  padding-left: 48px;
+  padding-right: 28px;
+}
+.type-1 a:hover .round {
+  width: calc(100% - 6px);
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+.type-1 a:hover .round i {
+  left: 12%;
+}
 
-    .slick-current {
-      opacity: 1;
-    }
-  </style>
-</head>
-<body>
+.type-2 a:hover .round {
+  background: none;
+}
+.type-2 a:hover .round i {
+  left: 70%;
+}
 
-  <section class="vertical-center-4 slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
-
-  <section class="vertical-center-3 slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
-
-  <section class="vertical-center-2 slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
-
-  <section class="vertical-center slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
-
-  <section class="vertical slider">
-    <div>
-      <img src="http://placehold.it/350x100?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
-    </div>
-  </section>
-  <section class="regular slider">
-    <div>
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=6">
-    </div>
-  </section>
-
-  <section class="center slider">
-    <div>
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=6">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=9">
-    </div>
-  </section>
-
-  <section class="variable slider">
-    <div>
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/200x300?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/100x300?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/200x300?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/300x300?text=6">
-    </div>
-  </section>
-
-  <section class="lazy slider" data-sizes="50vw">
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, http://placehold.it/960x300?text=1-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, http://placehold.it/960x300?text=2-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="http://placehold.it/650x300?text=3-650w 650w, http://placehold.it/960x300?text=3-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=4-350w"  data-srcset="http://placehold.it/650x300?text=4-650w 650w, http://placehold.it/960x300?text=4-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <!-- this slide should inherit the sizes attr from the parent slider -->
-      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
-    </div>
-  </section>
-
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="<?php echo base_url();?>slick/slicker/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-      $(".vertical-center-4").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 4,
-        slidesToScroll: 2
-      });
-      $(".vertical-center-3").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".vertical-center-2").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 2,
-        slidesToScroll: 2
-      });
-      $(".vertical-center").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-      });
-      $(".vertical").slick({
-        dots: true,
-        vertical: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".regular").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".center").slick({
-        dots: true,
-        infinite: true,
-        centerMode: true,
-        slidesToShow: 5,
-        slidesToScroll: 3
-      });
-      $(".variable").slick({
-        dots: true,
-        infinite: true,
-        variableWidth: true
-      });
-      $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
-      });
-    });
-</script>
-
-</body>
-</html>
+.type-3 .round {
+  background: transparent;
+}
+.type-3 a {
+  position: relative;
+  overflow: hidden;
+}
+.type-3 a.btn-1:after {
+  background-color: #f59965;
+}
+.type-3 a.btn-2:after {
+  background-color: #00c4eb;
+}
+.type-3 a.btn-3:after {
+  background-color: #737478;
+}
+.type-3 a:after {
+  content: "";
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 37px;
+  height: 38px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.type-3 a:hover:after {
+  right: 100%;
+  width: 50%;
+}
+.type-3 a:hover i {
+  margin-left: 4px;
+}
+  </style>    

@@ -15,11 +15,11 @@
                     </a>
                 </div>
               
-                <div class="col-md-3" id="raw2">
+                <div class="col-md-4" id="raw2">
                     <h3 style="text-align:center">Stay Connected<hr></h3>
                     <ul class="list-inline">
                         <li><a href="https://www.facebook.com/Petalk-2046551062235157/"target="_blank"><i id="fIcon" class="fa fa-facebook"></i></a></li>
-                        <li><i id="wIcon" class="fa fa-whatsapp"></i></li>
+                        <!--li><i id="wIcon" class="fa fa-whatsapp"></i></li-->
                         <li><a href="https://twitter.com/peta_lk"target="_blank"><i id="tIcon" class="fa fa-twitter"></i></a></li>
                         <li><a href="https://plus.google.com/u/2/101223230172545134012"target="_blank"><i id="gIcon" class="fa fa-google-plus"></i></a></li>
                     </ul>
@@ -27,7 +27,7 @@
                 
                 
                 
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <h3 style="text-align:center">Information<hr></h3>
                     <ul class="info">
                         <li>About Us</li>
@@ -59,6 +59,7 @@ footer-navbar end-->
                   border-top:solid skyblue;
                   color: black;
                   height:auto;
+                  margin-top:5%;
                   
             }   
             #ftlogo{
@@ -96,12 +97,14 @@ footer-navbar end-->
                 padding:10px 15px 10px 15px;
                 border-radius:360px;
                 border:solid gray;
-                font-size:14pt;
+                font-size:10pt;
                 color:black;
+                text-align:center;
             }
             .list-inline{
                 margin-left:5%;
                 margin-top:0%;
+                text-align:center;
             }
             #gIcon{
                 padding:8px 6px 8px 6px;

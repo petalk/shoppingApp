@@ -1,6 +1,7 @@
 
 
 <link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="<?php echo base_url()?>css/form.css"/>
 
 <div class="container" >
     <?php if(!$this->cart->contents()):
@@ -58,25 +59,31 @@ else:
             <td><?php echo anchor('ShoppingController/emptyCart', 'Empty Cart', 'id="cartBut"');?></td><!--
 -->         
             <td></td>
-            <td id="tdTotal"><h2><strong>Total</strong></h2></td>
-            <td id="tdTotal"><h2>Rs <?php echo $this->cart->format_number($this->cart->total()); ?></h2></td>
+            <td id="tdTotal"><h3><strong>Total</strong></h3></td>
+            <td id="tdTotal"><h3>Rs <?php echo $this->cart->format_number($this->cart->total()); ?></h3></td>
             
         </tr>
     </tbody>
 </table>
+    <?php
+        echo form_close(); 
+        endif;
+    ?>
 </div>
 
    
 <p>
-    <a id="cartButcheck" href="<?php echo base_url();?>index.php/order"> Check out</a> 
+    <button id="cartButcheck" onclick="showOrderForm()">Check out</button>
+    <!--a href="<?php echo base_url();?>index.php/order"> Check out</a--> 
 </p>
-<?php 
-echo form_close(); 
-endif;
-?>
-
 
 </div>
+
+<div class="container">
+    <p class="alert-success">   
+        <h2><?php echo $this->session->flashdata('orderStatus'); ?></h2>
+    </p>
+</div>  
 
 <div id="orderNowForm"> 
 
@@ -84,9 +91,7 @@ endif;
         $attributes = array("class" => "well", "id" => "shopform", "name" => "shopform");
          echo form_open("ShoppingController/check_out", $attributes);
     ?>  
-        <p class="alert-danger">   
-            <?php echo $this->session->flashdata('orderStatus'); ?>
-        </p>  
+        
         
 <!--        <input type="hidden" name="productID" value="<?php echo $productID ?>"/> -->
         <div id="userName" class="formDiv">
@@ -143,7 +148,12 @@ endif;
 
 </body>
 </html>
-
+<script>
+    function showOrderForm()
+    {
+        document.getElementById('orderNowForm').style.display="block";
+    }
+</script>    
 <style>
     body{
         background:#f7f7f7;
@@ -183,16 +193,16 @@ endif;
     }
     #totalRow{
         border-top:solid #000033;
-       
+        height:30pt;
     }
     #totalRow td{
-         height:40pt;
+         height:30pt;
     }
     #tdTotal{
         background:#000033;
        color:white;
         text-align:center;
-      border-radius: 5pt;
+      border-radius:;
        font-family: Arial Rounded MT Bold;
       
 
@@ -223,5 +233,9 @@ endif;
         
         background:#00aced;
         color:white;
+    }
+
+    #orderNowForm{
+        display:none;
     }
 </style>

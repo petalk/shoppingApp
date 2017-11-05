@@ -1,4 +1,6 @@
   
+    <link rel="stylesheet" href="<?php echo base_url()?>css/form.css"/>
+
     <div class="container">
         <div class="col-md-1"></div>
         <div id="OrderDetail" class="col-md-10">
@@ -92,90 +94,5 @@
        body{
            
        }
-       #shopform{
-           margin-bottom:5%;
-           border-left:solid black;
-           border-right:solid black;
-       }
-       .well{
-           background:white;
-       }
-       form {
-            position: relative;
-            width:50%;
-            margin-left:25%;
-            background:white;
-            margin-top:2%;
-            margin-bottom:5%;
-            border-radius:360px 0px 360px 0px;
-            border-left:skyblue;
-            border-right:solid black;
-        }
-        input[type="text"],input[type="number"]
-        {
-            width:60%;
-            margin-left:20%;
-            border: 1px dotted orange;
-            height:32px;
-        }
-        input[type="text"]:focus,input[type="number"]:focus{
-            border:none;
-            border-bottom:skyblue;
-        }
-        input[type="submit"]
-        {
-            border:1px solid black;
-            background:none;
-            color:#002166;
-            width:60%;
-            margin-left:20%;
-            margin-top:2%;
-            opacity: 0.5;
-            font-size: 14pt;
-        }
-        input[type="submit"]:hover{
-            opacity: 1.5;
-            color: blue;
-            font-size: 14pt;
-            font-family: Aharoni;
-        }
-        label{
-            margin-left:20%;
-            margin-top:4%;
-        }
-        i{
-            
-        }
-        #prodImage img{
-            width:100px;
-            height:80px;
-        }
-        #OrdreDetail{    
-            border:1px dotted orange;
-        }
-        #OrderDetail div{
-            margin-top:5%;
-            margin-bottom:;
-            padding:20pt;
-            display:inline-block;
-           
-        }
-        #OrderDetail h4{
-            color:;
-        }
-        @media screen and (max-width:900px) {
-            form{
-                width:80%;
-                margin-left:10%;
-            }
-            input[type="text"],input[type="number"]
-            {
-                width:90%;
-                margin-left:5%;
-            }
-            label{
-                margin-left:5%;
-            }
-            
-        }    
+    
    </style>    

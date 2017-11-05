@@ -13,6 +13,13 @@
          <script type="text/javascript" src="<?php echo base_url(); ?>/js/ownAng.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
          <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+          <!--links for slider -->  
+          <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>slick/slick.css"/>
+          <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>slick/slick-theme.css"/>
+          <script src="<?php echo base_url();?>slick/slick.js" type="text/javascript" charset="utf-8"></script>
+          <!--------------------->
+    
     </header>
     <body>
     <div ng-app="ItemApp" ng-controller="ItemController">    
