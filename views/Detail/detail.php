@@ -175,12 +175,24 @@
             </ul>
         </div>
     </div-->
+    </div>
 
-    <?php
-        $data['content']=$items;
-        $this->load->view('slick/responsive.php',$data);
-    ?>
-    
+    <div class="row relevant items">
+        <div class="container relevantItems">
+             <div class="col-md-4" id="relevantItems"><h4>OutDated</h4></div>
+             <div class="col-md-4" id="activeDiv"><h4>Relevant Items</h4></div>
+             <div class="col-md-4" id="relevantItems"><h4>Displayed</h4></div>       
+        </div> 
+        <div>              
+            <?php
+                $data['content']=$items;
+                $this->load->view('slick/responsive.php',$data);
+            ?>
+        </div>
+    </div>
+    <!--End of row relevant items-->                
+
+
     <div class="row">
       <div class="container">  
         <div class="col-md-12">

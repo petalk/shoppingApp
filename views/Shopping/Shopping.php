@@ -5,7 +5,7 @@
 
 <div class="container" >
     <?php if(!$this->cart->contents()):
-    echo 'You don\'t have any items yet.';
+    echo '<div class="alert-success" id="emptyMesage">You don\'t have any items yet.</div>';
 else:
 ?>
 
@@ -67,8 +67,8 @@ else:
 </table>
     <?php
         echo form_close(); 
-        endif;
     ?>
+   
 </div>
 
    
@@ -76,7 +76,9 @@ else:
     <button id="cartButcheck" onclick="showOrderForm()">Check out</button>
     <!--a href="<?php echo base_url();?>index.php/order"> Check out</a--> 
 </p>
-
+    <?php    
+        endif;
+    ?>
 </div>
 
 <div class="container">
@@ -237,5 +239,14 @@ else:
 
     #orderNowForm{
         display:none;
+    }
+    .alert-success{
+        margin-top:10%;
+        width:60%;
+        margin-left:20%;
+        height:30%;
+        height:auto;
+        font-size:22pt;
+        text-align:center;
     }
 </style>

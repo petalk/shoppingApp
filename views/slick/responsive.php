@@ -5,21 +5,33 @@
         <a href="http://localhost/eCommerce/index.php/Welcome/detail/<?php echo $i['ID'] ?>">
         <div class="well" id="sliderDiv">
             <img src="<?php echo base_url();?>images/<?php echo $i['MainImage'] ?>"><br>
-            <span id="itemName"><?php echo $i['name'] ?></span><br>
-           
+            <span id="itemName">
+                <?php
+                    echo $i['name'];
+                    if(strlen($i['name'])<21) {
+                        echo'<br>';
+                    ?>
+                    <br>
+                    <?php }else{}?>
+             
+            </span>
+           <hr>
                
                <?php if($i['Quantity']==0){ ?>
-                     <span id="" style="color:red">Stock : 0</span><br>
+                     <!--span id="" style="color:red">Stock : 0</span><br>
                 <?php } //end of if
                     else{ ?>
-                     <span id="" style="">Stock : <?php echo $i['Quantity']?></span><br> 
+                     <span id="" style="">  <?php //echo $i['Quantity']?></span><br--> 
                 <?php } //end of else?> 
                  
                 <?php if($i['oldprice']!=0){ ?>
-                    <span id=""><i><del><?php echo $i['oldprice']?></del></i></span><br>
-                <?php } else{?><br><?php }?>
-                
-                <span id="">Rs <?php echo $i['price']?><span><br>
+                    <span id="">
+                      Rs <?php echo $i['price']?>  
+                      <i><span id="oldprice"><del>Rs <?php echo $i['oldprice']?></del></span></i>
+                    </span><br>
+                <?php } else{?>
+                    <span id="">Rs <?php echo $i['price']?><span>
+                <?php }?>
                   
         </div>
         </a> 
