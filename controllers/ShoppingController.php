@@ -19,6 +19,7 @@ class ShoppingController extends CI_Controller {
         $data['products']=$this->ItemModel->getItems();
         $this->load->view('header.php',$data);
         $this->load->view('Shopping/Shopping.php',$data);
+        $this->load->view('footer.php');
     }
     
     public function order()
